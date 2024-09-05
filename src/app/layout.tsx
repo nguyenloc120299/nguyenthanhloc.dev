@@ -1,17 +1,17 @@
+
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import '@/styles/plugins.css'
 import dynamic from "next/dynamic";
 import MainLayout from "@/components/main-layout/MainLayout";
 
-const LoaderStart = dynamic(() => import('@/components/element/LoaderStart'), {
-  ssr: false,
-});
+
 
 import '@/styles/global.css'
 import '@/styles/loaders/loader.css'
 import '@/styles/main.css'
 import Script from "next/script";
+import LoaderStart from "@/components/element/LoaderStart";
 
 
 
@@ -36,8 +36,10 @@ export default function RootLayout({
         <MainLayout>
           {children}
         </MainLayout>
-
+        <Script src="/js/libs.min.js" />
+        <Script src="/js/app.js" />
         <Script src="/js/gallery-init.js" />
+   
      </body>
     </html>
   );

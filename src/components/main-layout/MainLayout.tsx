@@ -1,6 +1,14 @@
+'use client'
+
+
+
 import React from "react";
-import MainHeader from "./MainHeader";
+
 import Avatar from "../element/Avatar";
+
+import MainHeader from "./MainHeader";
+
+
 
 interface Props {
   children: React.ReactNode;
@@ -13,6 +21,7 @@ const MainLayout: React.FC<Props> = ({ children }) => {
       <div id="content" className="content">
         <div className="content__wrapper">{children}</div>
       </div>
+      
     </>
   );
 };
